@@ -1,0 +1,6 @@
+dotnet restore
+dotnet publish -c Release -o published
+release_commit_sha=`git rev-parse --short HEAD`
+release_tag="master-${release_commit_sha}"
+echo ${release_commit_sha}
+git archive --format=tar.gz -o ./${release_tag}.tar.gz --prefix=gocd-test/ master

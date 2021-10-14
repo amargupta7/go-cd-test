@@ -1,6 +1,6 @@
 steps:
-  - command: "dotnet publish -c Release -o published"
+  - command: scripts/cibuild
     plugins:
       - docker#v3.9.0:
-          image: "microsoft/dotnet:latest"
+          image: "mcr.microsoft.com/dotnet/sdk:5.0"
           always-pull: true
