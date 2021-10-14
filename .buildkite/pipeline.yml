@@ -1,0 +1,6 @@
+steps:
+  - command: "dotnet publish -c Release -o published"
+    plugins:
+      - docker#v3.9.0:
+          image: "microsoft/dotnet:latest"
+          always-pull: true
