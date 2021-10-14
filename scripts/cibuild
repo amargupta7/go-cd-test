@@ -7,3 +7,4 @@ release_tag="master-${release_commit_sha}"
 echo ${release_commit_sha}
 ls -ltr
 git archive --format=tar.gz -o ./${release_tag}.tar.gz --prefix=gocd-test/ master
+ls -ltr
